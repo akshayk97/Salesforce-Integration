@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Search User">
+        <lightning-input type="text" placeholder="Search Your User" onchange={handleSearch}>
+
+        </lightning-input>
+
+        <lightning-datatable key-field="id"
+                             data={displayResult}
+                             columns={columns}
+                             onrowaction={handleRowAction}
+                             onrowselection={getSelectedIdAction}>
+                             
+        </lightning-datatable>
+        <div slot="footer"> 
+            <lightning-button variant="brand" label="Create User" title="Primary action" onclick={createUserAction} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>
